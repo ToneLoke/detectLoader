@@ -17,9 +17,8 @@ function callWhenReadyToGo (cb) {
         var matchedText = eleText.match(regexp)
         // grab the id of the element
         var eleID = mutation.removedNodes[0].id
-        // does the element have
         var matchedID = []
-        // is element ID present
+        // is element ID present and does it contain load or spin
         if (eleID.length > 0) matchedID = eleID.match(regexp)
         // if any of the instances are true we have a loader
         if (matchedClass.length > 0 || matchedText.length > 0 || matchedID.length > 0) {
